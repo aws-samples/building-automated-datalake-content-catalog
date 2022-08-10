@@ -1,15 +1,14 @@
-This project is a prototype. If you decided to deploy this work in production environment, please conduct your own security reviews and incorporate security controls commensurate with the data classification whitin your organization. (e.g., when S3 is created they should check to make sure BPA is enabled and/or encryption is enabled based on data sensitivity).
+This project is a <b>prototype.</b> If you decided to deploy this work in production environment, please conduct your own security reviews and incorporate security controls commensurate with the data classification whitin your organization. (e.g., when S3 is created they should check to make sure BPA is enabled and/or encryption is enabled based on data sensitivity).
 
-# Data Marketplace Prototype
+# Building an Automated Datalake Content Catalog
 
-This prototype used the AWS Cloud Development Kit (CDK) to deploy an Infrastructure that showcase the use of Data Lake in a multi account design. 
-Changes to this prototype and update of AWS resources required by the prototype are all supported by the CDK as configuration as code. .
+This Solution used the AWS Cloud Development Kit (CDK) to deploy an Infrastructure that showcase the use of Data Lake in a multi-account design. 
 
 ## Prerequisites
 
-### 1.  Install AWS Cloud Development Kit (CDK) 
-   1. See [Getting started with the AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html).
-
+### 1.  Prerequisites Installation
+   1. Install  [AWS Cloud Development Kit (CDK)](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html).
+   2. Install [Node npm installer](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 ### 2.  Install Typescript and dependencies
 ```sh
 npm update
@@ -25,7 +24,7 @@ different functions of producing data, managing a data lake, and consuming data 
 * Data Producer Account
 * Data Lake Account
 
-### 5.  Obtain/Configure temporary credentials to access AWS accounts
+### 5.  Configure temporary credentials to access AWS accounts
 
 In order to use the CDK to deploy the cloud resources required by this prototype, you'll need to obtain temporary credentials for each of the accounts.
 
@@ -66,7 +65,7 @@ Edit `config/DataMarketPlaceConfig.yaml` and set the following keys:
 | `AppPrefix`           | a prefix to append at the begins of all deployed resources. |
 | `DataProducerAccount` | Data Producer AWS account ID                                |
 | `DataLakeAccount`     | Data Lake AWS account ID                                    |
-
+ | `NotificationEmail`   | Your Email address for notifications                        |   
 ### 2. Boostrap accounts
 Run the below commands to cdk boostrap each account
 ```shell
@@ -152,7 +151,7 @@ make destroy-all
 "Geography": "US",
 "ContractStart": "11/19/21",
 "ContractEnd": "01/01/22",
-"PrimaryContact": "ckamps",
+"PrimaryContact": "your-contact-here",
 "PrefixDirectory": "covid",
 "TransformJobName": "Glue ETL Job Name",
 "StatisticalAnalysisJobName": "Glue Stats Job Name",
@@ -235,7 +234,3 @@ or
 cdk synth -c config=DataLake
 cdk deploy -c config=DataLake
 ```
-or 
-```bash
-cdk synth -c config=DataConsumer
-cdk deploy -c config=DataConsumer```
