@@ -1,0 +1,31 @@
+AppPrefix: 'prefix for deployment resource name'
+DataProducerAccount: "XXXXXXXXXXXX"
+DataLakeAccount: "XXXXXXXXXXXX"
+RegisteredBuckets:
+  - "arn:aws:s3:::<bucket name>"
+NotificationEmail: "Specify valid email address"
+BucketKeyArn: "kms key arn"
+LakeFormationTags:
+  - Name: "Data Rights"
+    Values:
+      - "Single Product Use Only"
+      - "Limited - Insert Name of Department EG marketing"
+      - "Limited - Contract Use"
+      - "Enterprise"
+  - Name: "Access Level"
+    Values:
+      - "Public"
+      - "Internal"
+      - "Restricted"
+      - "Sensitive"
+      - "Secret"
+  - Name: "Data Classification"
+    Values:
+      - "Test"
+      - "Production"
+  - Name: "Data Sensitivity"
+    Values:
+      - "None"
+      - "PII"
+      - "PCI"
+      - "PII/PCI"

@@ -1,0 +1,13 @@
+{
+    "vendor": "Name of vendor providing data",
+    "data_type": "Data Type",
+    "geography": "US",
+    "contract_start": "06/21/2022",
+    "contract_end": "06/21/2023",
+    "primary_contact": "Full Name",
+    "prefix_directory": "Prefix directory name on s3 containing the data",
+    "transform_job_name": "glueETLJobXXXXXXX-xxxxxxxxxx",
+    "statistical_analysis_job_name": "glueStatsJobXXXXXXX-xxxxxxxxxx",
+    "data_classification": "Standard",
+    "data_access_level": "Test"
+}
