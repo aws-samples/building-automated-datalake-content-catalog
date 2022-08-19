@@ -4,6 +4,12 @@ This project is a <b>prototype.</b> If you decided to deploy this work in produc
 
 This Solution used the AWS Cloud Development Kit (CDK) to deploy an Infrastructure that showcase the use of Data Lake in a multi-account design. 
 
+![alt Datalake Content Catalog](DataContentCatalogDiagram.drawio.png)
+Figure 1: Multi-account Data catalog illustration
+
+![alt Datalake Content Catalog](DataProcessing.drawio.png)
+Figure 2: Internal processing for new incoming data
+
 ## Prerequisites
 
 ### 1.  Prerequisites Installation
